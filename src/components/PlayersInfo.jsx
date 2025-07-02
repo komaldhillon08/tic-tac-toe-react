@@ -13,14 +13,9 @@ const[playerName , setPlayerName] = useState(initiaName)
         // setIsEditing(!isEditing)
         setIsEditing( (isEditing) => !isEditing)
     }
-
     function handleChange(event) {
         setPlayerName(event.target.value);
-        
     }
-
-
-
 // create the  input file that is why user click the edit button then chenge the name 
     let editPlayerName = <span className="player-name">{playerName}</span>;
 
@@ -29,8 +24,6 @@ const[playerName , setPlayerName] = useState(initiaName)
         editPlayerName = <input type="text" required value={playerName} onChange={handleChange} />
        // btnCaption="Save"
     }
-
-
     return (
         <>
             <li>
