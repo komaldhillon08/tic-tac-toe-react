@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export default function Players({ initiaName, symbol , isActive}) {
+export default function Players({ initiaName, symbol, isActive, onChangeName }) {
 
-const[playerName , setPlayerName] = useState(initiaName)
+    const [playerName, setPlayerName] = useState(initiaName)
 
     //create the useSate hook then u can update the player name and save 
     const [isEditing, setIsEditing] = useState(false);
@@ -11,18 +11,22 @@ const[playerName , setPlayerName] = useState(initiaName)
     function handleEditClick() {
         // setIsEditing(isEditing ? false : true)
         // setIsEditing(!isEditing)
-        setIsEditing( (isEditing) => !isEditing)
+        setIsEditing((isEditing) => !isEditing)
+        
+        if (isEditing) {
+            onChangeName(symbol, playerName)
+        }
     }
     function handleChange(event) {
         setPlayerName(event.target.value);
     }
-// create the  input file that is why user click the edit button then chenge the name 
+    // create the  input file that is why user click the edit button then chenge the name 
     let editPlayerName = <span className="player-name">{playerName}</span>;
 
-     //  let btnCaption = "Edit"
+    //  let btnCaption = "Edit"
     if (isEditing) {
         editPlayerName = <input type="text" required value={playerName} onChange={handleChange} />
-       // btnCaption="Save"
+        // btnCaption="Save"
     }
     return (
         <>

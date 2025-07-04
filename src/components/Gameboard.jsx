@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function GameBoard({ onSelectSquare, board /* activePlayerSymbol */ }) {
 
-    
+
     /*     const [GameBoard, setGameBoard] = useState(initiaGameBoard);
     
         function handleSelectSquare(rowIndex, colIndex) {

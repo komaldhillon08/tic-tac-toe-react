@@ -48,7 +48,7 @@ h1 {
 }
 
 #game-container {
-  max-width: 35rem;
+  max-width: 40rem;
   margin: 3rem auto;
   padding: 2rem;
   border-radius: 6px;
@@ -134,7 +134,7 @@ h1 {
 }
 
 .player-symbol {
-  /* margin-left: 1rem; */
+  margin-left: 1rem;
   font-size: 1rem;
   color: #e1dec7;
 }
